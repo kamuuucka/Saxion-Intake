@@ -10,17 +10,34 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator anim;
 
-    public float jumpForce = 20f;
+    public float jumpForce;
     public Transform feet;
     public LayerMask groundLayers;
 
     private float moveX;
+    private bool canShoot = true;
+    private int head = 1;
 
     private void Update()
     {
+        if (Input.GetKeyDown("1"))
+        {
+            head = 1;
+        }
+        else if (Input.GetKeyDown("2"))
+        {
+            head = 2;
+        }
+        else if (Input.GetKeyDown("3"))
+        {
+            head = 3;
+        }
+       
+        headChosen(head);
+
         moveX = Input.GetAxisRaw("Horizontal"); //GetAxisRaw - input will always be -1, 0, 1; Horizontal = A / D, aL / aR
 
-        if (Input.GetButtonDown("Jump") && isGrounded())        //If needed to hold the button = GetButton; reads only the first click 
+        if (Input.GetButtonDown("Jump") && isGrounded()) //If needed to hold the button = GetButton; reads only the first click 
         {
             Jump();
         }
@@ -36,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveX > 0f)
         {
-            transform.localScale = new Vector3(2f, 2f, 1f);
+            transform.localScale = new Vector3(2f, 2f, 1f); //Setting sprites with right scale
         } else if (moveX < 0f)
         {
             transform.localScale = new Vector3(-2f, 2f, 1f);
@@ -69,5 +86,32 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void headChosen(int head)
+    {
+        switch (head)
+        {
+            case 1:
+                jumpForce = 24f;
+                movementSpeed = 10f;
+                canShoot = true;
+                Debug.Log("Chosen head 1: normal jump, normal speed, can shoot");
+                break;
+            case 2:
+                jumpForce = 28f;
+                movementSpeed = 10f;
+                canShoot = false;
+                Debug.Log("Chosen head 2: higher jump, normal speed, cannot shoot");
+                break;
+            case 3:
+                jumpForce = 24f;
+                movementSpeed = 16f;
+                canShoot = false;
+                Debug.Log("Chosen head 3: normal jump, super speed, cannot shoot");
+                break;
+            default:
+                break;
+        }
     }
 }
