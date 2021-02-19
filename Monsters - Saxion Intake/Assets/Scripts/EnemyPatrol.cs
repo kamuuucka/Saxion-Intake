@@ -10,7 +10,7 @@ public class EnemyPatrol : MonoBehaviour
     public LayerMask groundLayers;
     public Transform patrol;
     
-    private bool isFacingRight = true;
+    private bool isFacingRight = false;
     private RaycastHit2D hit;
 
     private void Update()
@@ -36,7 +36,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             Debug.Log("not hitting ground");
             isFacingRight = !isFacingRight;
-            transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
+            transform.localScale = new Vector3(-transform.localScale.x, 2f, 1f);
         }
     }
 }
