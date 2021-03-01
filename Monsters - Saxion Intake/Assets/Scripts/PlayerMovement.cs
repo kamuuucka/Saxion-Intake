@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private bool canShoot = true;
     private int head = 1;
 
+    [HideInInspector] public bool isFacingRight = true;
+
     private void Update()
     {
         if (Input.GetKeyDown("1"))
@@ -54,9 +56,11 @@ public class PlayerMovement : MonoBehaviour
         if (moveX > 0f)
         {
             transform.localScale = new Vector3(2f, 2f, 1f); //Setting sprites with right scale
+            isFacingRight = true;
         } else if (moveX < 0f)
         {
             transform.localScale = new Vector3(-2f, 2f, 1f);
+            isFacingRight = false;
         }
         
         anim.SetBool("isGrounded", isGrounded());
