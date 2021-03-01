@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerDeath : MonoBehaviour
         {
             Destroy(gameObject);
             LevelManager.instance.Respawn();
+            LevelManager.instance.IncreaseCurrency(-50);
         }
     }
 }
