@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 507293805}
   - component: {fileID: 507293804}
   - component: {fileID: 507293809}
+  - component: {fileID: 507293810}
   m_Layer: 0
   m_Name: PatrolEnemy
   m_TagString: Enemy
@@ -748,6 +749,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &507293810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507293803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d430e290d89b71c4192b33e3dadd66a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &519377638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4463468949919517654, guid: fa7d7ced06cf46447ae9ed502ae1ec2c,

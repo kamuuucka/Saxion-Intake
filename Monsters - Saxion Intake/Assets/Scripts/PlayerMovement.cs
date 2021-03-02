@@ -9,13 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed;
     public Rigidbody2D rb;
     public Animator anim;
+    public static bool canShoot = true;
 
     public float jumpForce;
     public Transform feet;
     public LayerMask groundLayers;
 
     private float moveX;
-    private bool canShoot = true;
     private int head = 1;
 
     [HideInInspector] public bool isFacingRight = true;

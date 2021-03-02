@@ -22,7 +22,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (hit.collider)
         {
-            Debug.Log("hitting ground");
+            //Debug.Log("hitting ground");
             if (isFacingRight)
             {
                 rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -34,7 +34,7 @@ public class EnemyPatrol : MonoBehaviour
         }
         else
         {
-            Debug.Log("not hitting ground");
+            //Debug.Log("not hitting ground");
             isFacingRight = !isFacingRight;
             transform.localScale = new Vector3(-transform.localScale.x, 2f, 1f);
         }
