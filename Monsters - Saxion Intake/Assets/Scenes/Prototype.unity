@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d430e290d89b71c4192b33e3dadd66a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorToTurnTo: {r: 1, g: 0, b: 0, a: 1}
+  myObject: {fileID: 507293807}
 --- !u!1 &519377638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4463468949919517654, guid: fa7d7ced06cf46447ae9ed502ae1ec2c,
