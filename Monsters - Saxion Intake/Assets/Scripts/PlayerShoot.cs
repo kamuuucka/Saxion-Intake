@@ -17,12 +17,13 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerMovement.canShoot)
+        if (PlayerMovement.canShoot == true)
         {
+            Debug.Log("Able to shoot");
             if (Input.GetMouseButtonDown(0) && timeUntilFire < Time.time)
             {
                 Shoot();
-                //Debug.Log("Shoot");
+                Debug.Log("Shoot");
                 timeUntilFire = Time.time + fireRate;
             }
         }

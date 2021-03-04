@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class LevelManager : MonoBehaviour
 {
+   private bool gameHasEnded = false;
+   
    public static LevelManager instance;
    
    public Transform respawnPoint;
    public GameObject playerPrefab;
 
+   public CinemachineVirtualCameraBase cam;
+
    [Header("Currency")]
-   public int currency = 0;
+   public int currency = 50;
    public Text currencyUI;
    
    private void Awake()
@@ -22,7 +25,9 @@ public class LevelManager : MonoBehaviour
 
    public void Respawn()
    {
-      Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
+      GameObject player = Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
+      cam.Follow = player.transform;
+      PlayerMovement.canShoot = true;
    }
 
    public void IncreaseCurrency(int amount)
@@ -38,5 +43,23 @@ public class LevelManager : MonoBehaviour
          currencyUI.text = currency.ToString();
       }
       
+   }
+   
+   public void EndGame()
+   {
+      if (!gameHasEnded)
+      {
+         if (currency <= 0)
+         {
+            gameHasEnded = true;
+            Debug.Log("GAME OVER");
+            Restart();
+         }
+      }
+   }
+
+   private void Restart()
+   {
+      SceneManager.LoadScene("Prototype");
    }
 }

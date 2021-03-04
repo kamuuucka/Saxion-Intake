@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(canShoot);
         if (Input.GetKeyDown("1"))
         {
             head = 1;
