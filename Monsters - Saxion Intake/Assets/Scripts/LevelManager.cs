@@ -60,6 +60,6 @@ public class LevelManager : MonoBehaviour
 
    private void Restart()
    {
-      SceneManager.LoadScene("Prototype");
+      SceneManager.LoadScene("GameOver");
    }
 }

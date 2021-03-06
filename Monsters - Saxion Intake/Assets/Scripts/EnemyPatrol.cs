@@ -13,6 +13,12 @@ public class EnemyPatrol : MonoBehaviour
     private bool isFacingRight = false;
     private RaycastHit2D hit;
 
+    private void Start()
+    {
+        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        Physics2D.IgnoreCollision(enemy.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+    }
+
     private void Update()
     {
         hit = Physics2D.Raycast(patrol.position, -transform.up, 1f, groundLayers);
@@ -22,7 +28,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (hit.collider)
         {
-            //Debug.Log("hitting ground");
+            Debug.Log("hitting ground");
             if (isFacingRight)
             {
                 rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -34,9 +40,17 @@ public class EnemyPatrol : MonoBehaviour
         }
         else
         {
-            //Debug.Log("not hitting ground");
+            Debug.Log("not hitting ground");
             isFacingRight = !isFacingRight;
             transform.localScale = new Vector3(-transform.localScale.x, 2f, 1f);
         }
     }
+
+    /*private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Physics2D.IgnoreCollision(other.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+    }*/
 }
