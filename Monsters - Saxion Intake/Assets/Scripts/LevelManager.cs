@@ -17,7 +17,7 @@ public class LevelManager : MonoBehaviour
    [Header("Currency")]
    public int currency = 50;
    public Text currencyUI;
-   
+
    private void Awake()
    {
       instance = this;
@@ -62,4 +62,12 @@ public class LevelManager : MonoBehaviour
    {
       SceneManager.LoadScene("GameOver");
    }
+
+   public void FinishGame()
+   {
+      SceneManager.LoadScene("GameWin");
+      Debug.Log(currency);
+      PlayerPrefs.SetFloat("score", currency);
+   }
+   
 }
