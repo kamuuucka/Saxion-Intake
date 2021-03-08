@@ -69,9 +69,9 @@
      <Compile Include="Assets\Scripts\PlayerDeath.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+     <Compile Include="Assets\Scripts\ShowScore.cs" />
      <Compile Include="Assets\Scripts\Sign.cs" />
-     <Compile Include="Assets\ShowScore.cs" />
-     <Compile Include="Assets\SoulPicker.cs" />
+     <Compile Include="Assets\Scripts\SoulPicker.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

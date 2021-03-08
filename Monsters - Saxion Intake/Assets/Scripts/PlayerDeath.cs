@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -12,10 +11,20 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))   //if player walks into the enemy, dies
         {
-            Destroy(gameObject);
-            LevelManager.instance.Respawn();
-            LevelManager.instance.IncreaseCurrency(-50);
+            Die(-50);
         }
+        else if (collision.gameObject.CompareTag("Water"))
+        {
+            Die(-100);
+        }
+        
+    }
+
+    private void Die(int damage)
+    {
+        Destroy(gameObject);
+        LevelManager.instance.Respawn();
+        LevelManager.instance.IncreaseCurrency(damage);
     }
     
 }
