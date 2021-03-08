@@ -52,13 +52,13 @@ public class LevelManager : MonoBehaviour
          if (currency <= 0)
          {
             gameHasEnded = true;
-            Debug.Log("GAME OVER");
+            //Debug.Log("GAME OVER");
             Restart();
          }
       }
    }
 
-   private void Restart()
+   public void Restart()
    {
       SceneManager.LoadScene("GameOver");
    }

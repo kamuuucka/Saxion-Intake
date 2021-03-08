@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -10,6 +9,7 @@ public class CountDownTimer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timerText;
 
     private float timer = 0f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -63,9 +63,18 @@ public class CountDownTimer : MonoBehaviour
                 timerText.text += "0" + seconds;
             }
         }
-        else
+        else if (minutes != 0)
         {
-            timerText.text = "00";
+            timerText.text = minutes + ":00";
+        }else
+        {
+            timerText.text = "00:00";
+            Invoke("EndGameWithDelay",0.2f);
         }
+    }
+
+    private void EndGameWithDelay()
+    {
+        LevelManager.instance.Restart();
     }
 }

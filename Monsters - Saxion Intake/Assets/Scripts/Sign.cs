@@ -1,31 +1,28 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Sign : MonoBehaviour
 {
     public GameObject dialogBox;
     public Text dialogText;
-    //public string dialog;
+    public string dialog;
     public bool playerInRange;
     
     void Update()
     {
         if (playerInRange == true)
         {
-            Debug.Log("Player in range");
+            //Debug.Log("Player in range");
             if (!dialogBox.activeInHierarchy)
             {
-                Debug.Log("BoxActive");
+                //Debug.Log("BoxActive");
                 dialogBox.SetActive(true);
                 //dialogText.text = dialog;
             }
         }
         else
         {
-            Debug.Log("Box inactive");
+            //Debug.Log("Box inactive");
             dialogBox.SetActive(false);
         }
     }
