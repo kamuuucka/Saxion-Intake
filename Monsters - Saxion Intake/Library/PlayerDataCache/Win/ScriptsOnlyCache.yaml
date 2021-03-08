@@ -1197,4 +1197,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/GameWin.unity
-  playerPath: C:/Users/matus/game/Monsters - Saxion Intake.exe
+  playerPath: C:/Users/matus/Desktop/game/Monsters - Saxion Intake.exe
