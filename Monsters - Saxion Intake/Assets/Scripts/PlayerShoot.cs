@@ -19,7 +19,7 @@ public class PlayerShoot : MonoBehaviour
         if (PlayerMovement.canShoot == true)
         {
             //Debug.Log("Able to shoot");
-            if (Input.GetMouseButtonDown(0) && timeUntilFire < Time.time)
+            if (Input.GetMouseButtonDown(0) && timeUntilFire < Time.time && !PauseMenu.GameIsPaused)
             {
                 Shoot();
                 //Debug.Log("Shoot");
