@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
        
         headChosen(head);
+        LevelManager.instance.ShowHeads(head);
 
         moveX = Input.GetAxisRaw("Horizontal"); //GetAxisRaw - input will always be -1, 0, 1; Horizontal = A / D, aL / aR
 
