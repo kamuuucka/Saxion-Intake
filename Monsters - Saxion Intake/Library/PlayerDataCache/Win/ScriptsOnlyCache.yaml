@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - LevelManager
     - MainMenu
     - Parallax
+    - PauseMenu
     - PlayerDeath
     - PlayerMovement
     - PlayerShoot
@@ -25,7 +26,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -122,6 +122,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13004}
     - Class: 114
+      Script: {instanceID: 13178}
+    - Class: 114
       Script: {instanceID: 13246}
     - Class: 114
       Script: {instanceID: 13358}
@@ -142,11 +144,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14438}
     - Class: 114
-      Script: {instanceID: 14570}
+      Script: {instanceID: 14440}
     - Class: 114
-      Script: {instanceID: 14646}
+      Script: {instanceID: 14572}
     - Class: 114
-      Script: {instanceID: 14700}
+      Script: {instanceID: 14648}
+    - Class: 114
+      Script: {instanceID: 14702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -205,7 +209,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14046}
     - Class: 114
-      Script: {instanceID: 14700}
+      Script: {instanceID: 14702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -256,7 +260,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14046}
     - Class: 114
-      Script: {instanceID: 14700}
+      Script: {instanceID: 14702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -315,7 +319,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14348}
     - Class: 114
-      Script: {instanceID: 14700}
+      Script: {instanceID: 14702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -377,7 +381,7 @@ ScriptsOnlyBuild:
     className: EnemyDeath
   - hash:
       serializedVersion: 2
-      Hash: dc5ba7c42b0a2feca47f78938d733010
+      Hash: 3f70c1a559414045621e1472101172e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LevelManager
@@ -1055,6 +1059,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 930b2a7c015542327cee6af349728cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
       Hash: 018fb31badc8924cdc2f620064a81679
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1197,4 +1207,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game.unity
   - Assets/Scenes/GameOver.unity
   - Assets/Scenes/GameWin.unity
-  playerPath: C:/Users/matus/Desktop/game/Monsters - Saxion Intake.exe
+  playerPath: C:/Users/matus/Desktop/game/Windows/Cerberus' Adventure/Monsters -
+    Saxion Intake.exe
